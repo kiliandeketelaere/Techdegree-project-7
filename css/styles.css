@@ -1,0 +1,42 @@
+* {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #7477bf;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav {
+    background-color: #4d4c72;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.container-item {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 10px 10px 10px 10px;   
+    font-size: 12px;
+}
+
+    
+.member-profile{
+border-radius: 50%;
+max-height: 40px;
+}
+
+
+
+.icon {
+    fill: white;
+    height: 30px
+}
