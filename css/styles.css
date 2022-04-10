@@ -129,15 +129,12 @@ h5{
 .widget-line{
     display: flex;
     align-items: center;
-    margin-left: 50px;
-    margin-top: 50px;
-    width: 90%;
-    height: 90%;
+    margin: 50px;
 }
 .widget-bar{
     display: flex;
     align-items: center;
-    margin-left: 50px;
+    margin: 50px;
     width: 80%;
     height: 80% ;
 }
@@ -145,7 +142,7 @@ h5{
     display: flex;
     justify-content: space-between;
     align-items: right;
-    margin-left: 100px;
+    margin-left: 50px;
     width: 60%;
     height: 50%;
 }
