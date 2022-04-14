@@ -1,430 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>WebApp Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <head >
+    <title>Your WebApp</title>
+    <meta name = "viewport" content ="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" >
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/toggle.css">
   </head>
-  <body class="grid-container">
+  <body>
+    <div class="grid">
+      <header>
+          <h1 class="header-title">Your<span class="title-app">App&trade;</span></h1>
+          <div class="header-container">
+            <svg class= "bell" version="1.1" id="Layer_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                <!-- <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                </style> -->
+                <g id="_x36__6_">
+                  <g>
+                    <path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
+                  </g>
+                </g>
+            </svg>
+            <ul id="pop">
+              <li>This is an alert.</li>
+            </ul>
+            <span class="notification" id="iconNotification"></span>
+            <img class="mypic" src="images/icon.svg" alt="Picture of me">
+            <p>Kilian De Ketelaere</p>
+          </div>
+      </header>
 
-        <header class="grid-item1">
-
-            <div class="header-container">
-                <div class="header-item">
-                    <h1>WebApp™</h1>
-                </div>
-                <div class="header-lastitem">
-                    <img class="icon" src="svgs/bell.svg" alt="bell-image"><a href =#bell></a>
-                    <div class="vl"></div>
-                    <img src="images/member-1.jpg" alt="Member profile image" class="member-profile">
-                    <h2>Student Name</h2>
-                </div>
-            </div>
-
-        </header>
-
-
-
-
-<!-- 
-    Navbar 
--->
-
-
-
-
-        <div class="grid-item2">
-
-            <div class="navigation-container">
-                <img class="icon" src="svgs/home.svg" alt="home-image"><a href =#home></a>
-                <img class="icon" src="svgs/bar-chart.svg" alt="bar-chart"><a href=#bar-chart></a>
-                <img class="icon" src="svgs/members.svg" alt="members"><a href="#members"></a>
-                <img class="icon" src="svgs/settings.svg" alt="gear image"><a href="#settings"></a>
-            </div>
-
+      <aside>
+          <div class="sidebar-container">
+            <img class="sidebar-icon" src="icons/home.svg" alt="image of dashboard">
+            <img class="sidebar-icon" src="icons/bar-chart.svg" alt="image of visits">
+            <img class="sidebar-icon" src="icons/members.svg" alt="image of members">
+            <img class="sidebar-icon" src="icons/settings.svg" alt="image of settings">
+          </div>
+      </aside>
+      
+      <nav>
+        <div class="index-wrap">
+          <p class="index" >Dash Board</p>
+          <div class="input-wrap">
+          </div>
+        </div> 
+        <div id="alert">
         </div>
-
-
-<!-- 
-    Tabs Dashboard 
--->
-
-
-
-        <main class="grid-item3">
-           
-            <!-- Tab links -->
-        <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'dashboard')">Dashboard</button>
-        </div>
-  
-          <!-- Tab content -->
-          <div id="dashboard" class="tabcontent">
-  
-            <div class="alert">
-                <div class="test">
-                 <span><strong>Alert: </strong> You have unread messages</span>
-                </div>
-                
-
-                <div class="test1">
-                    <button aria-label='delete item' onClick= '.alert display:none' type='button'>X</button>
-                </div>
+      </nav>
+      
+      <main>
+        <section class="traffic">
+          <div class="traffic-wrap">
+            <p class="subject">TRAFFIC</p>
+            <div class="time-wrap">
+              <p>Hourly</p>
+              <p>Daily</p>
+              <p>Weekly</p>
+              <p>Monthly</p>
             </div>
           </div>
-
-        </main>
-
-
-
-
-<!-- 
-    Traffic and links  
--->
-
-
-
-
-        <div class="grid-item4">
-
-            <div class="Traffic-container">
-
-                <div class="traffic-item">
-                    <h4>Traffic</h4>
-                </div>
-                <div class="traffic-item1">
-                    
-                    <div class="link-container">
-                        <a>Hourly</a>
-                        <a>Daily</a>
-                        <a>Weekly</a>
-                        <a>Monthly</a>
-                     </div>
-
-                </div>
-            </div>
-                </div>
-
-
-
-<!-- 
-    Widgets js 
--->
-
-
-        <div class="grid-item6"> 
-
-            <div class="widget-line">
-                <!-- line graph -->
-                <canvas id="traffic-chart" aria-label="Traffic Chart" role="img"></canvas>
-            </div>
-            
-        </div>
-        <div class="grid-item7">
-            <h4>DAILY TRAFFIC</h4>
-
-            <div class="widget-bar">
-                <!-- bar graph -->
-                <canvas id='bar-chart' aria-label="Traffic Chart" role="img" ></canvas>
-            </div>
-
-        </div>
-        <div class="grid-item8">
-            <h4>MOBILE USERS</h4>
-
-            <div class="widget-circle">
-                <!-- doughnut graph -->
-                <canvas id='doughnut-chart'></canvas>
-            </div>
-        </div>
-
-
-
-
-<!-- 
-    Social Stats 
--->
-
-
-
-
-        <div class="grid-item9">
-           <h3>SOCIAL STATS</h3>
+          <div class="widget-container-full">
+            <canvas id="traffic-chart"></canvas>
+          </div>
+        </section>
+        <section class="daily-traffic">
+          <div>
+            <p class="subject">DAIRY TRAFFIC</p>
+          </div>
+          <div class="widget-container-half">
+            <canvas id="daily-chart"></canvas>
+          </div> 
+        </section>
+        <section class="mobile-users">
+          <div>
+            <p class="subject">MOBILE USERS</p>
+          </div>
+          <div class="widget-container-half">
+            <canvas id="mobile-chart"></canvas>
+          </div>
+        </section>
+        <section class="social-stats">
+          <p class="subject">SOCIAL STATS</p>
+          <div class="social-wrap">
             <div class="social-container">
-                <div class="social-item">
-                    <div class="social-item1"><img class="social-icons" src="svgs/facebook.svg" alt="home-image"></a></div>
-                    <div class="social-item1">
-                        <p class="subtitle">Facebook</p>
-                        <p class="numbers">10,320</p>
+                <svg  class="icon-size" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="-16 -20 64 64" style="enable-background:new ;" xml:space="preserve">
+                <path class="icon"  d="M32,3.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.8,0.8,24,0,22.2,0c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,7.8,5.5,5.2,2.2,1.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,3,10.1,3c12.1,0,18.7-10,18.7-18.7c0-0.3,0-0.6,0-0.8C30,5.6,31.1,4.4,32,3.1z"/>
+                </svg>
+              <div class="social-text">
+                <p class="social-media">Twitter</p>
+                <p class="social-number">10,345</p>
+              </div>
+            </div> 
+              <div class="social-container">
+                <svg class="icon-size" enable-background="" id="Layer_2" version="1.1" width="32px" height="32px" viewBox="-15 -14 90 90" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path class="icon" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
+                </svg>
+                <div class="social-text">
+                  <p class="social-media">Facebook</p>
+                  <p class="social-number">8,739</p>
+                </div>
+              </div>
+              
+              <div class="social-container">
+                <svg class="icon-size" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon" d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 001.384 2.126A5.868 5.868 0 004.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 002.126-1.384 5.86 5.86 0 001.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 00-1.384-2.126A5.847 5.847 0 0019.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 01-.899 1.382 3.744 3.744 0 01-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 01-1.379-.899 3.644 3.644 0 01-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 01-2.88 0 1.44 1.44 0 012.88 0z"/>
+                </svg>
+                
+                <div class="social-text">
+                  <p class="social-media">Instagram</p>
+                  <p class="social-number">2,530</p>
+                </div> 
+              </div>
+          </div>
+        </section>
+        <section class="new-members">
+            <p class="subject">NEW MEMBERS</p>
+            <div class="member-wrap">
+                <div class="member-container">
+                  <div class="member-info">
+                    <img class="member-icon" src ="images/member-1.jpg" alt="picture of member-1">
+                    <div class="member-text">
+                      <p class="member-name">Victoria Chambers</p>
+                      <a href="#">victoria.chambers@example.com</a>
                     </div>
+                  </div>
+                  <p>20/07/23</p>
                 </div>
-
-                <div class="social-item">
-                    <div class="social-item1">
-
-                        <div class="social-item1"><img class="social-icons" src="svgs/instagram.svg" alt="home-image"></a></div>
-
-                        
-                    </div>
-                    <div class="social-item1">
-                        <p class="subtitle">Facebook</p>
-                        <p class="numbers">10,320</p>
-                    </div>
+                <div class="member-container">
+                  <div class="member-info">
+                  <img class="member-icon" src ="images/member-2.jpg" alt="picture of member-2">
+                  <div class="member-text">
+                    <p class="member-name">Dale Byrd</p>
+                    <a href="#">dale.byrd@example.com</a>
+                  </div>
                 </div>
-
-                <div class="social-item">
-                    <div class="social-item1"><img class="social-icons" src="svgs/twitter.svg" alt="home-image"></a></div>
-                    <div class="social-item1">
-                        <p class="subtitle">Facebook</p>
-                        <p class="numbers">10,320</p>
-                    </div>
+                  <p>20/07/23</p>
                 </div>
-
-            </div>
-           
-           
-           
-            
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-<!-- 
-    New Members 
--->
-
-
-
-
-        <div class="grid-item10">
-            <h3>New Members</h3>
-
-            <div class="bla">
-
-            <div class="members-flex">
-
-                <div class="members-test1">
-                    <img src="images/member-1.jpg" class="member-profile" alt="member one">
+                <div class="member-container">
+                  <div class="member-info">
+                  <img class="member-icon" src ="images/member-3.jpg" alt="picture of member-3">
+                  <div class="member-text">
+                    <p class="member-name">Dawn Wood</p>
+                    <a href="#">dawn.wood@example.com</a>
+                  </div>
                 </div>
-
-                <div class="members-test2">
-                    <li class="list-item"> Victoria Chambers</li>
-                    <li class="list-item">victoria.chambers@example.com</li>
+                  <p>20/07/23</p>
                 </div>
-
-                <div class="list-item"><li>10/15/20</li></div>
-            </div>
-
-            <hr class="solid">
-
-            <div class="members-flex">
-
-                <div class="members-test1">
-                    <img src="images/member-2.jpg" class="member-profile" alt="member one">
+                <div class="member-container">
+                  <div class="member-info">
+                  <img class="member-icon" src ="images/member-4.jpg" alt="picture of member-4">
+                  <div class="member-text">
+                    <p class="member-name">Dan Oliver</p>
+                    <a href="#">dan.olvier82@example.com</a>
+                  </div>
                 </div>
-
-                <div class="members-test2">
-                    <li class="list-item"> Dale Byrd</li>
-                    <li class="list-item">dale.byrd52@example.com</li>
-                </div>
-
-                <div class="list-item"><li>10/15/20</li></div>
-            </div>
-
-            <hr class="solid">
-
-            <div class="members-flex">
-
-                <div class="members-test1">
-                    <img src="images/member-3.jpg" class="member-profile" alt="member one">
-                </div>
-
-                <div class="members-test2">
-                    <li class="list-item">Dawn Wood</li>
-                    <li class="list-item">dawn.wood16@example.com</li>
-                </div>
-
-                <div class="list-item"><li>10/15/20</li></div>
-            </div>
-
-            <hr class="solid">
-
-            <div class="members-flex">
-
-                <div class="members-test1">
-                    <img src="images/member-4.jpg" class="member-profile" alt="member one">
-                </div>
-
-                <div class="members-test2">
-                    <li class="list-item">Dan Oliver</li>
-                   <li class="list-item">dan.oliver82@example.com</li>
-                </div>
-
-                <div class="list-item"><li>10/15/20</li></div>
-            </div>
-        </div>
-
-           
-<!-- 
-    Recent Activity 
--->
-
-
-        </div>
-        <div class="grid-item11">
-            <h3>Recent Activity</h3>
-
-            <div class="bla">
-
-            <div class="activity-flex">
-
-                <div class="activity-test1">
-                    <img src="images/member-1.jpg" class="member-profile" alt="member one">
-                </div>
-
-                <div class="activity-test2">
-                    <li class="list-item">Victoria Chambers commented on WebApp's SEO Tips</li>
-                    <li class="list-item">4 hours ago</li>
-                </div>
-
-                <div class="list-item">
-                    <img class="icon" src="svgs/right-arrow.svg" alt="gear image">
+                  <p>20/07/23</p>
                 </div>
             </div>
-
-            <hr class="solid">
-
-            <div class="activity-flex">
-
-                <div class="activity-test1">
-                    <img src="images/member-2.jpg" class="member-profile" alt="member one">
+        </section>
+        <section class="recent-activity">
+            <p class="subject">RECENT ACTIVITY</p>
+            <div class="member-wrap">
+              <div class="member-container">
+                <div class="member-info">
+                <img class="member-icon" src ="images/member-1.jpg" alt="picture of member-1">
+                <div class="member-text member-text2">
+                  <p>Victoria Chambers commented on Your dashboard SEO Tips</p>
+                  <p>4 hours ago</p>
                 </div>
-
-                <div class="activity-test2">
-                    <li class="list-item">Dale Byrd liked the post Facebook's Changes for 2021</li>
-                    <li class="list-item">5 hours ago</li>
+              </div>
+                <p>></p>
+              </div>
+              <div class="member-container">
+                <div class="member-info">
+                <img class="member-icon" src ="images/member-2.jpg" alt="picture of member-2">
+                <div class="member-text member-text2">
+                  <p>Dale Byrd like the post Facebook's Changes for 2021 </p>
+                  <p>5 hours ago</p>
                 </div>
-
-                <div class="list-item">
-                    <img class="icon" src="svgs/right-arrow.svg" alt="gear image">
+              </div>
+                <p>></p>
+              </div>
+              
+              <div class="member-container">
+                <div class="member-info">
+                <img class="member-icon" src ="images/member-3.jpg" alt="picture of member-3">
+                <div class="member-text member-text2">
+                  <p>Dawn Wood commented on Facebook's Changes for 2021</p>
+                  <p>5 hours ago</p>
                 </div>
+              </div> 
+                <p>></p>
+              </div>
+              <div class="member-container">
+                <div class="member-info">
+                <img class="member-icon" src ="images/member-4.jpg" alt="picture of member-4">
+                <div class="member-text member-text2">
+                  <p>Dan Oliver posted WebApp's SEO Tips</p>
+                  <p>1 day ago</p>
+                </div>
+                </div>
+                <p>></p>
+              </div>
             </div>
-
-            <hr class="solid">
-
-
-            <div class="activity-flex">
-
-                <div class="activity-test1">
-                    <img src="images/member-3.jpg" class="member-profile" alt="member one">
-                </div>
-
-                <div class="activity-test2">
-                    <li class="list-item">Dawn Wood commented on Fcebook's Changes for 2021</li>
-                    <li class="list-item">5 hours ago</li>
-                </div>
-
-                <div class="list-item">
-                    <img class="icon" src="svgs/right-arrow.svg" alt="gear image">
-                </div>
+        </section>
+        <section class="message-user">
+          <p class="subject">MESSAGE USER</p>
+          <form>
+            <input class="message-input" id="userField" type="text" placeholder="User Search" autocomplete="on" list="names">
+            <datalist id="names">
+              <option>Victoria Chambers</option>
+              <option>Dale Byrd</option>
+              <option>Dawn Wood</option>
+              <option>Dan Oliver</option>
+            </datalist>
+            <textarea class="message-text" id="messageField" placeholder="Message for user"></textarea>
+            <button class="message-button" id="send">SEND</button>
+          </form>
+        </section>
+        <section class="settings">
+          <p class="subject">SETTINGS</p>
+          <div class="toggle-switch">
+            <p>Send Email Notifications</p>
+            <label class="switch-light switch-ios switch1">
+              <input type="checkbox">
+              <span>
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label> 
+          </div>
+          <div class="toggle-switch switch2">
+            <p>Set Profile to public</p>
+            <label class="switch-light switch-ios switch2" >
+              <input type="checkbox">
+              <span>
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label> 
+          </div>
+          <div class="setting-container">
+            <select class="setting-select" id="select" value="-10:00">
+              <option disabled selected >-- Select Timezone --</option>
+              <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+              <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+              <option value="-10:00">(GMT -10:00) Hawaii</option>
+            </select>
+            <div class="setting-button">
+              <button id="save">SAVE</button>
+              <button id="cancel">CANCEL</button>
             </div>
-
-            <hr class="solid">
-
-
-            <div class="activity-flex">
-
-                <div class="activity-test1">
-                    <img src="images/member-4.jpg" class="member-profile" alt="member one">
-                </div>
-
-                <div class="activity-test2">
-                    <li class="list-item">Dan Oliver posted WebApp's SEO Tips</li>
-                    <li class="list-item">1 day ago</li>
-                </div>
-
-                <div class="list-item">
-                    <img class="icon" src="svgs/right-arrow.svg" alt="gear image">
-                </div>
-            </div>
-
-        </div>  
-        </div>
-
-<!-- 
-    Message users form field 
--->
-
-
-       
-        <div class="grid-item12">
-
-            <h3 class="headline">Message User</h3>
-            <form class="widget-container">
-                <input type="text" placeholder="Search for user"
-                    class="form-field" id="userField">
-                        <textarea placeholder="Message for user" class="form-area"
-                            id="messageField"></textarea>
-                            <button class="button-primary" id="send" >Send</button>
-            </form>
-        </div>
-
-
-
-
-<!-- 
-    Settings  
--->
-
-
-
-
-        </div>
-        <div class="grid-item13">
-            <h3 class="headline" id="settings1">Settings</h3>
-
-                    <div class="settings-row">
-                        <input type="checkbox" id="check" class="toggle">
-                        <label for="check">Send Email Notfications</label>
-                    </div>
-
-                    <div class="settings-row">
-                        <input type="checkbox" id="check1" class="toggle">
-                        <label for="check1">Set Profile to Public</label>
-                    </div>
-           
-               <select class="form-field" id="timezone">
-                   <option disabled selected>Select a Timezone</option>
-                   <option>Eastern</option>
-                       <!--more option-->
-               </select>
-                   <div class="settingbuttons-container">
-                       <button  class="settings-save" id="save">Save</button>
-                       <button  class="settings-cancel" id="cancel">Cancel</button>
-                   </div>      
-            
-            
-            
-            
-        </div>
-
-
-        
-
-
+          </div>
+        </section>
+      </main>
     </div>
-    <script src="js/js.js"></script>
-    <script src="js/chart.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
+  </html>

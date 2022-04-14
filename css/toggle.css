@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/*
+* CSS TOGGLE SWITCH
+*
+* Ionuț Colceriu - ghinda.net
+* https://github.com/ghinda/css-toggle-switch
+*
+*/
+/* supported values are px, rem-calc, em-calc
+ */
+/* imports
+ */
+/* Functions
+ */
+/* Shared
+ */
+/* Hide by default
+ */
+.switch-toggle a,
+.switch-light span span {
+  display: none; }
+
+  *{
+    outline: none !important;
+  }
+/* We can't test for a specific feature,
+ * so we only target browsers with support for media queries.
+ */
+@media only screen {
+  /* Checkbox
+ */
+  .switch-light {
+    position: relative;
+    display: block;
+    /* simulate default browser focus outlines on the switch,
+   * when the inputs are focused.
+   */ }
+
+    .switch-light::after {
+      clear: both;
+      content: '';
+      display: table; }
+    .switch-light *,
+    .switch-light *:before,
+    .switch-light *:after {
+      box-sizing: border-box; }
+  
+
+
+@media only screen {
+  /* don't hide the input from screen-readers and keyboard access
+ */
+  .switch-light input {
+    position: absolute;
+    opacity: 0;
+    z-index: 3; }
+ 
+  /* inherit from label
+ */
+
+  .switch-light span span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    float: left;
+    width: 50%;
+    text-align: center;
+    user-select: none; }
+  .switch-light a {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    z-index: 1;
+    display: block;
+    width: 50%;
+    height: 100%;
+    padding: 0; }
+  /* bootstrap 4 tweaks
+*/
+  .switch-light.row {
+    display: flex; }
+  .switch-light .alert-light {
+    color: #333; }
+  /* Radio Switch
+ */
+  .switch-toggle {
+    position: relative;
+    display: block;
+    /* simulate default browser focus outlines on the switch,
+   * when the inputs are focused.
+   */
+    /* For callout panels in foundation
+  */
+    padding: 0 !important;
+    /* 2 items
+   */
+    /* 3 items
+   */
+    /* 4 items
+   */
+    /* 5 items
+   */
+    /* 6 items
+   */ }
+    .switch-toggle::after {
+      clear: both;
+      content: '';
+      display: table; }
+    .switch-toggle *,
+    .switch-toggle *:before,
+    .switch-toggle *:after {
+      box-sizing: border-box; }
+    .switch-toggle a {
+      display: block;
+      transition: all 0.2s ease-out; }
+    .switch-toggle label,
+    .switch-toggle > span {
+      /* breathing room for bootstrap/foundation classes.
+     */
+      line-height: 2em; }
+    .switch-toggle input:focus ~ span a,
+    .switch-toggle input:focus + label {
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: Highlight;
+      /* Chrome/Opera gets its native focus styles.
+     */ } }
+
+  /* iOS Theme
+*/
+  .switch-ios.switch-light span span {
+    color: #888b92; }
+  .switch-ios.switch-light a {
+    left: 0;
+    top: 0;
+    width: 2em;
+    height: 2em;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 0.25em solid #D8D9DB;
+    transition: all .2s ease-out; }
+  .switch-ios.switch-light > span {
+    display: block;
+    width: 100%;
+    height: 2em;
+    background-color: #D8D9DB;
+    border-radius: 1.75em;
+    transition: all .1s ease-out; }
+  .switch-ios.switch-light > span span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    line-height: 1.875em;
+    vertical-align: middle;
+    transition: all .2s ease-out; }
+    .switch-ios.switch-light > span span:first-of-type {
+      opacity: 1;
+      padding-left: 1.875em; }
+    .switch-ios.switch-light > span span:last-of-type {
+      padding-right: 1.875em; }
+  .switch-ios.switch-light input:checked ~ span a {
+    left: 100%;
+    border-color: rgb(126, 126, 228);
+    margin-left: -2em; }
+  .switch-ios.switch-light input:checked ~ span {
+    border-color: rgb(126, 126, 228);
+    box-shadow: inset 0 0 0 30px rgb(126, 126, 228); }
+  .switch-ios.switch-light input:checked ~ span span:first-of-type {
+    opacity: 0; }
+  .switch-ios.switch-light input:checked ~ span span:last-of-type {
+    opacity: 1;
+    color: #fff; }
+  .switch-ios.switch-toggle {
+    background-color: #D8D9DB;
+    border-radius: 30px;
+    box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0; }
+    .switch-ios.switch-toggle a {
+      background-color: rgb(126, 126, 228);
+      border: 0.125em solid #D8D9DB;
+      border-radius: 1.75em;
+      transition: all 10s ease-out; }
+    .switch-ios.switch-toggle label {
+      height: 2.4em;
+      color: #888b92;
+      line-height: 2.4em;
+      vertical-align: middle; }
+  .switch-ios input:checked + label {
+    color: #3e4043; }
+}  
