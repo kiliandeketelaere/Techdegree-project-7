@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="grid">
-      <header>
+      <header id="home">
           <h1 class="header-title">Your<span class="title-app">App&trade;</span></h1>
           <div class="header-container">
             <svg class= "bell" version="1.1" id="Layer_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -35,10 +35,10 @@
 
       <aside>
           <div class="sidebar-container">
-            <img class="sidebar-icon" src="icons/home.svg" alt="image of dashboard">
-            <img class="sidebar-icon" src="icons/bar-chart.svg" alt="image of visits">
-            <img class="sidebar-icon" src="icons/members.svg" alt="image of members">
-            <img class="sidebar-icon" src="icons/settings.svg" alt="image of settings">
+            <a href="#home"><img class="sidebar-icon" src="icons/home.svg" alt="image of dashboard"></a>
+            <a href="#chart"><img class="sidebar-icon" src="icons/bar-chart.svg" alt="image of visits"></a>
+            <a href="#members"><img class="sidebar-icon" src="icons/members.svg" alt="image of members"></a>
+            <a href="#settings"><img class="sidebar-icon" src="icons/settings.svg" alt="image of settings"></a>
           </div>
       </aside>
       
@@ -63,7 +63,7 @@
               <p>Monthly</p>
             </div>
           </div>
-          <div class="widget-container-full">
+          <div class="widget-container-full" id="chart">
             <canvas id="traffic-chart"></canvas>
           </div>
         </section>
@@ -117,7 +117,8 @@
               </div>
           </div>
         </section>
-        <section class="new-members">
+        
+        <section class="new-members" id="members">
             <p class="subject">NEW MEMBERS</p>
             <div class="member-wrap">
                 <div class="member-container">
@@ -222,7 +223,7 @@
             <button class="message-button" id="send">SEND</button>
           </form>
         </section>
-        <section class="settings">
+        <section class="settings" id="settings">
           <p class="subject">SETTINGS</p>
           <div class="toggle-switch">
             <p>Send Email Notifications</p>
