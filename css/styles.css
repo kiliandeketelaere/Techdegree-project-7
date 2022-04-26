@@ -46,6 +46,7 @@ header svg {
 .header-left,.header-right {
   display: flex;
   align-items: center;
+  color: white;
 }
 /*header-left*/
 .header-left{
@@ -58,7 +59,9 @@ header svg {
 /*header-right*/
 .header-right{
   justify-content: flex-end;
-  
+}
+.white {
+  color: white;
 }
 .header-right img {
   display: inline-block;
